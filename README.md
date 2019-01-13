@@ -1,6 +1,6 @@
 # _pug-practice_
 
-#### _rendering a site with pug, 01.11.2019_
+#### _rendering a site with pug, 01.12.2019_
 
 #### By _**planeswalker1**_
 

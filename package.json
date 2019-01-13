@@ -1,0 +1,24 @@
+{
+  "name": "pug-practice",
+  "version": "1.0.1",
+  "author": "Daniel Munoz <daniel.munozdev@gmail.com>",
+  "private": true,
+  "description": "rendering a site with pug",
+  "main": "app.js",
+  "scripts": {
+    "dev": "node app.js"
+  },
+  "dependencies": {
+    "express": "^4.16.4",
+    "pug": "^2.0.3",
+    "serve-favicon": "^2.5.0"
+  },
+  "devDependencies": {
+    "grunt": "^1.0.3",
+    "grunt-cli": "^1.3.2",
+    "grunt-contrib-stylus": "^1.2.0",
+    "grunt-contrib-watch": "^1.1.0",
+    "morgan": "^1.9.1",
+    "nodemon": "^1.18.9"
+  }
+}
