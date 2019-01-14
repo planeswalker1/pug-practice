@@ -1,7 +1,19 @@
 const express = require('express');
+const path = require('path');
+const favicon = require('serve-favicon')
 const logger = require('morgan');
 
+const config = require('./app/models/config');
+const routes = require('./routes/index');
+
 let app = express();
+
+app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')))
+app.use(express.static(path.join(__dirname, 'public')));
+
+// view engine
+app.set('views', path.join(__dirname, 'app', 'views'));
+app.set('view engine', 'pug');
 
 if (app.get('env') === 'development') {
   app.locals.dev = true;
@@ -12,15 +24,13 @@ if (app.locals.dev) {
   app.use(logger('dev'));
 }
 
+// setup index route
+app.use('/', routes);
 
-
-
-
-
-// catch 404 and pass to error handler
+// catch 404 and send to err handler
 app.use(function (req, res, next) {
-  let err = new Error('Page Not Found :(');
-  err.status(404);
+  let err = new Error('Page not found');
+  err.status = 404;
   next(err);
 });
 

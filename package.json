@@ -1,12 +1,13 @@
 {
   "name": "pug-practice",
-  "version": "1.0.1",
+  "version": "1.0.0",
   "author": "Daniel Munoz <daniel.munozdev@gmail.com>",
   "private": true,
   "description": "rendering a site with pug",
   "main": "app.js",
   "scripts": {
-    "dev": "node app.js"
+    "build": "npm install && grunt publish",
+    "dev": "grunt & nodemon app.js"
   },
   "dependencies": {
     "express": "^4.16.4",
