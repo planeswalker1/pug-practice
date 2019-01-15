@@ -27,11 +27,9 @@ if (app.locals.dev) {
 // setup index route
 app.use('/', routes);
 
-// catch 404 and send to err handler
+// catch 404 and render 404 page
 app.use(function (req, res, next) {
-  let err = new Error('Page not found');
-  err.status = 404;
-  next(err);
+  res.render('404');
 });
 
 // development error handler
